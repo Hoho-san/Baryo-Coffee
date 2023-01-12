@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/images/logo2.jpg"
+            type="image/x-icon"
+        />
+        <title>Baryo Coffee | Menu</title>
+
+        <!-- font awesome cdn link  -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/script.js" async></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="" />
+            </a>
+
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <a href="menu.html">menu</a>
+                <a href="review.html">review</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <div class="fas fa-bars" id="menu-btn"></div>
+            </div>
+
+            <div class="search-form">
+                <input
+                    type="text"
+                    id="myInput"
+                    onkeyup="myFunction()"
+                    placeholder="Search for products..."
+                    title="Type in a name"
+                />
+                <label for="search-box" class="fas fa-search"></label>
+            </div>
+
+            <section class="cart-items-container">
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column"
+                        >PRICE</span
+                    >
+                    <span class="cart-quantity cart-header cart-column"
+                        >QUANTITY</span
+                    >
+                </div>
+                <div class="cart-items"></div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">0</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">
+                    PURCHASE
+                </button>
+            </section>
+        </header>
+
+        <section class="products" id="products">
+            <h1 class="heading">our <span>menu</span></h1>
+
+            <ul id="myUL" class="shop-items">
+                <li class="shop-item">
+                    <a>Americano</a>
+                    <div class="icons">
+                        <a
+                            class="shop-item-button fas fa-shopping-cart"
+                            type="button"
+                        ></a>
+                        <a
+                            onclick="likeFunction(this)"
+                            class="fa fa-thumbs-up"
+                        ></a>
+                        <a
+                            class="fas fa-eye eyebutton"
+                            type="button"
+                            src="images/americano.jpg"
+                        ></a>
+                    </div>
+                    <img
+                        class="shop-item-image"
+                        src="images/americano.jpg"
+                        alt=""
+                    />
+                    <div class="shop-item-detail">
+                        <h3 class="shop-item-title">Americano</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="shop-item-price">₱ 55.00</div>
+                    </div>
+                </li>
+                <li class="shop-item">
+                    <a>Matcha Fusion</a>
+                    <div class="icons">
+                        <a
+                            class="shop-item-button fas fa-shopping-cart"
+                            type="button"
+                        ></a>
+                        <a
+                            onclick="likeFunction(this)"
+                            class="fa fa-thumbs-up"
+                        ></a>
+                        <a
+                            class="fas fa-eye eyebutton"
+                            type="button"
+                            src="images/fusion.jpg"
+                        ></a>
+                    </div>
+                    <img
+                        class="shop-item-image"
+                        src="images/fusion.jpg"
+                        alt=""
+                    />
+                    <div class="shop-item-detail">
+                        <h3 class="shop-item-title">Matcha Fusion</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="shop-item-price">₱ 80.00</div>
+                    </div>
+                </li>
+                <li class="shop-item">
+                    <a>Cafe Latte</a>
+                    <div class="icons">
+                        <a
+                            class="shop-item-button fas fa-shopping-cart"
+                            type="button"
+                        ></a>
+                        <a
+                            onclick="likeFunction(this)"
+                            class="fa fa-thumbs-up"
+                        ></a>
+                        <a
+                            class="fas fa-eye eyebutton"
+                            type="button"
+                            src="images/latte.jpg"
+                        ></a>
+                    </div>
+                    <img
+                        class="shop-item-image"
+                        src="images/latte.jpg"
+                        alt=""
+                    />
+                    <div class="shop-item-detail">
+                        <h3 class="shop-item-title">Cafe Latte</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="shop-item-price">₱ 70.00</div>
+                    </div>
+                </li>
+                <li class="shop-item">
+                    <a>Caramel Macchiato</a>
+                    <div class="icons">
+                        <a
+                            class="shop-item-button fas fa-shopping-cart"
+                            type="button"
+                        ></a>
+                        <a
+                            onclick="likeFunction(this)"
+                            class="fa fa-thumbs-up"
+                        ></a>
+                        <a
+                            class="fas fa-eye eyebutton"
+                            type="button"
+                            src="images/macchiato.jpg"
+                        ></a>
+                    </div>
+                    <img
+                        class="shop-item-image"
+                        src="images/macchiato.jpg"
+                        alt=""
+                    />
+                    <div class="shop-item-detail">
+                        <h3 class="shop-item-title">Caramel Macchiato</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="shop-item-price">₱ 70.00</div>
+                    </div>
+                </li>
+                <li class="shop-item">
+                    <a>Signature Baryo</a>
+                    <div class="icons">
+                        <a
+                            class="shop-item-button fas fa-shopping-cart"
+                            type="button"
+                        ></a>
+                        <a
+                            onclick="likeFunction(this)"
+                            class="fa fa-thumbs-up"
+                        ></a>
+                        <a
+                            class="fas fa-eye eyebutton"
+                            type="button"
+                            src="images/signature.jpg"
+                        ></a>
+                    </div>
+                    <img
+                        class="shop-item-image"
+                        src="images/signature.jpg"
+                        alt=""
+                    />
+                    <div class="shop-item-detail">
+                        <h3 class="shop-item-title">Signature Baryo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="shop-item-price">₱ 80.00</div>
+                    </div>
+                </li>
+                <li class="shop-item">
+                    <a>Regular Burger</a>
+                    <div class="icons">
+                        <a
+                            class="shop-item-button fas fa-shopping-cart"
+                            type="button"
+                        ></a>
+                        <a
+                            onclick="likeFunction(this)"
+                            class="fa fa-thumbs-up"
+                        ></a>
+                        <a
+                            class="fas fa-eye eyebutton"
+                            type="button"
+                            src="images/burger.jpg"
+                        ></a>
+                    </div>
+                    <img
+                        class="shop-item-image"
+                        src="images/burger.jpg"
+                        alt=""
+                    />
+                    <div class="shop-item-detail">
+                        <h3 class="shop-item-title">Regular Burger</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="shop-item-price">₱ 35.00</div>
+                    </div>
+                </li>
+                <li class="shop-item">
+                    <a>Combo Fries</a>
+                    <div class="icons">
+                        <a
+                            class="shop-item-button fas fa-shopping-cart"
+                            type="button"
+                        ></a>
+                        <a
+                            onclick="likeFunction(this)"
+                            class="fa fa-thumbs-up"
+                        ></a>
+                        <a
+                            class="fas fa-eye eyebutton"
+                            type="button"
+                            src="images/cheesy.jpg"
+                        ></a>
+                    </div>
+                    <img
+                        class="shop-item-image"
+                        src="images/cheesy.jpg"
+                        alt=""
+                    />
+                    <div class="shop-item-detail">
+                        <h3 class="shop-item-title">Combo Fries</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="shop-item-price">₱ 75.00</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="popup-image">
+                <span>&times;</span>
+                <img src="images/americano.jpg" alt="" />
+            </div>
+        </section>
+    </body>
+</html>
